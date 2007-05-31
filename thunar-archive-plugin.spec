@@ -1,19 +1,14 @@
-%define __libtoolize /bin/true 
-
-Summary:     An archive plugin for the Thunar File Manager
-Name: 		thunar-archive-plugin
-Version: 	0.2.4
-Release: 	%mkrel 1
+Summary:	An archive plugin for the Thunar File Manager
+Name:		thunar-archive-plugin
+Version:	0.2.4
+Release: 	%mkrel 2
 License:	GPL
-URL: 		http://xfce4-goodies.berlios.de
-Source0: 	%{name}-%{version}.tar.bz2
-Group: 		Graphical desktop/Xfce
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
-Requires:       thunar >= 0.2.2
-#optional requires..at least 1 is needed
-#Requires:     file-roller
-#Requires:     kdeutils-ark
+Group:		Graphical desktop/Xfce
+URL:		http://foo-projects.org/~benny/projects/thunar-archive-plugin
+Source0:	%{name}-%{version}.tar.bz2
+Requires:	thunar >= 0.2.2
 BuildRequires:	thunar-devel >= 0.2.2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The thunar-archive-plugin is a plugin for the Thunar File Manager, which
@@ -30,26 +25,30 @@ KDE archive manager) have been added. Xarchiver, the Xfce archive manager,
 will include an appropriate xarchiver.tap file in the next release. 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang %{name}
 
+%post
+%update_icon_cache hicolor
+
+%postun
+%clean_icon_cache hicolor
+
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS 
 %{_libdir}/thunarx-1/*
 %{_libdir}/%{name}/*
-%{_iconsdir}/hicolor/16x16/apps/tap*
-
-
+%{_iconsdir}/hicolor/*/apps/*
