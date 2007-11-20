@@ -1,13 +1,13 @@
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
 Version:	0.2.4
-Release: 	%mkrel 2
-License:	GPL
+Release: 	%mkrel 3
+License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://foo-projects.org/~benny/projects/thunar-archive-plugin
 Source0:	%{name}-%{version}.tar.bz2
-Requires:	thunar >= 0.2.2
-BuildRequires:	thunar-devel >= 0.2.2
+Requires:	thunar >= 0.8.0
+BuildRequires:	thunar-devel >= 0.8.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -48,7 +48,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS 
+%doc AUTHORS ChangeLog NEWS README THANKS 
 %{_libdir}/thunarx-1/*
 %{_libdir}/%{name}/*
 %{_iconsdir}/hicolor/*/apps/*
