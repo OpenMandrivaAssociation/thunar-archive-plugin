@@ -8,7 +8,6 @@ URL:		http://foo-projects.org/~benny/projects/thunar-archive-plugin
 Source0:	%{name}-%{version}.tar.bz2
 Requires:	thunar >= 0.8.0
 BuildRequires:	thunar-devel >= 0.8.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The thunar-archive-plugin is a plugin for the Thunar File Manager, which
