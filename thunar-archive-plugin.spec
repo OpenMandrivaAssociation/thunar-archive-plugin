@@ -49,5 +49,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog NEWS README THANKS 
 %{_libdir}/thunarx-1/*
-%{_libdir}/%{name}/*
+%{_libdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
