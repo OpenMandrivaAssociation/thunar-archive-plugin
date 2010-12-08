@@ -1,7 +1,7 @@
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
 Version:	0.2.4
-Release: 	%mkrel 9
+Release: 	%mkrel 10
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://foo-projects.org/~benny/projects/thunar-archive-plugin
