@@ -1,12 +1,14 @@
+%define url_ver %(echo %{version} | cut -c 1-3)
+
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
-Version:	0.2.4
-Release: 	%mkrel 10
+Version:	0.3.0
+Release: 	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://foo-projects.org/~benny/projects/thunar-archive-plugin
-Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	thunar-devel >= 0.8.0
+URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
+Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
+BuildRequires:	thunar-devel >= 1.2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -36,22 +38,12 @@ rm -rf %{buildroot}
 
 %find_lang %{name}
 
-%if %mdkversion < 200900
-%post
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_icon_cache hicolor
-%endif
-
 %clean
 rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog NEWS README THANKS 
-%{_libdir}/thunarx-1/*
+%doc AUTHORS ChangeLog NEWS README THANKS
+%{_libdir}/thunarx-2/*
 %{_libdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
