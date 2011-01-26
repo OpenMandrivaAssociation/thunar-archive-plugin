@@ -9,6 +9,7 @@ Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	thunar-devel >= 1.2.0
+BuildRequires:	intltool
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
