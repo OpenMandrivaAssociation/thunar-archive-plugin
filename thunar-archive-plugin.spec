@@ -49,3 +49,74 @@ rm -rf %{buildroot}
 %{_libdir}/thunarx-2/*
 %{_libdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
+
+
+%changelog
+* Wed Jan 26 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 0.3.0-1mdv2011.0
++ Revision: 632819
+- add buildrequires on exo-devel
+- add buildrequires on intltool
+- update to new version 0.3.0
+- update url for Source0
+- drop old scriplets
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.1 packages
+
+* Fri May 07 2010 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-9mdv2010.1
++ Revision: 543281
+- rebuild for mdv 2010.1
+
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 0.2.4-8mdv2010.0
++ Revision: 445421
+- rebuild
+
+* Thu Mar 05 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-7mdv2009.1
++ Revision: 349181
+- rebuild whole xfce
+
+* Sat Oct 18 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-6mdv2009.1
++ Revision: 294885
+- rebuild for new Thunar  (Xfce4.6 beta1)
+
+* Mon Jun 16 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-5mdv2009.0
++ Revision: 219663
+- run scriplets only for mdv older than 2009
+
+* Mon Jun 16 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-4mdv2009.0
++ Revision: 219406
+- fix file list
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 0.2.4-4mdv2008.1
++ Revision: 170641
+- remove require on empty package that no more exists
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Nov 21 2007 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-3mdv2008.1
++ Revision: 110827
+- do not package COPYING and INSTALL files
+- be more explicit on thunar-devel version
+
+* Thu May 31 2007 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2.4-2mdv2008.0
++ Revision: 33277
+- spec file clean
+- add macros to %%post and %%postun
+
+
+* Mon Feb 05 2007 Jérôme Soyer <saispo@mandriva.org> 0.2.4-1mdv2007.0
++ Revision: 116280
+- New release 0.2.4
+- New release 0.2.2
+- Import thunar-archive-plugin
+
+* Wed Jul 05 2006 Charles A Edwards <eslrahc@mandriva.org> 0.2.0-1mdv2007.0
+- 0.2.0
+- rm explicit R for file-roller
+- update file list
+
+* Sat Jun 24 2006 Charles A Edwards <eslrahc@mandriva.org> 0.1.2-1mdv2007.0
+- initial mandriva package
+
