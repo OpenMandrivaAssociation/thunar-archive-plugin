@@ -31,7 +31,7 @@ will include an appropriate xarchiver.tap file in the next release.
 
 %prep
 %setup -q
-%apply_pathes
+%apply_patches
 
 %build
 sed -i -e 's/AM_CONFIG_HEADER/AM_CONFIG_HEADERS/' configure.in
