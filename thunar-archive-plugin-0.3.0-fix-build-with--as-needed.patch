@@ -1,0 +1,25 @@
+From c30a46451052820bd8d6617d32389dee7cae93e1 Mon Sep 17 00:00:00 2001
+From: Jannis Pohlmann <jannis@xfce.org>
+Date: Fri, 20 May 2011 00:12:56 +0000
+Subject: Fix build with --as-needed (bug #7533). Patch by Yves-Alexis Perez.
+
+---
+diff --git a/thunar-archive-plugin/Makefile.am b/thunar-archive-plugin/Makefile.am
+index 4cbfefa..c08f8d0 100644
+--- a/thunar-archive-plugin/Makefile.am
++++ b/thunar-archive-plugin/Makefile.am
+@@ -26,6 +26,12 @@ thunar_archive_plugin_la_CFLAGS =					\
+ 	$(EXO_CFLAGS)							\
+ 	$(LIBXFCE4UTIL_CFLAGS)
+ 
++thunar_archive_plugin_la_LIBADD =					\
++	$(PLATFORM_LIBS)						\
++	$(THUNARX_LIBS)							\
++	$(EXO_LIBS)							\
++	$(LIBXFCE4UTIL_LIBS)
++
+ thunar_archive_plugin_la_LDFLAGS =					\
+ 	-avoid-version							\
+ 	-export-dynamic							\
+--
+cgit v0.9.0.3
