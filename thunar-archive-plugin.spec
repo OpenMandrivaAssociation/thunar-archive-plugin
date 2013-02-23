@@ -34,7 +34,7 @@ will include an appropriate xarchiver.tap file in the next release.
 %apply_patches
 
 %build
-sed -i -e 's/AM_CONFIG_HEADER/AM_CONFIG_HEADERS/' configure.in
+sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.in
 NOCONFIGURE=yes xdt-autogen
 
 %configure2_5x
