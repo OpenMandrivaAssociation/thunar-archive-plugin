@@ -2,14 +2,12 @@
 
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
-Version:	0.3.0
-Release:	3
+Version:	0.3.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
-Patch0:		thunar-archive-plugin-0.3.0-fix-build-with--as-needed.patch
-Patch1:		thunar-archive-plugin-0.3.0-fix-unused-but-set-variable.patch
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(thunarx-2)
 BuildRequires:	pkgconfig(exo-1)
@@ -31,12 +29,8 @@ will include an appropriate xarchiver.tap file in the next release.
 
 %prep
 %setup -q
-%apply_patches
 
 %build
-sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.in
-NOCONFIGURE=yes xdt-autogen
-
 %configure2_5x
 %make
 
