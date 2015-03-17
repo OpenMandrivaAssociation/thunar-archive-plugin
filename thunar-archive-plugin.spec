@@ -31,7 +31,7 @@ will include an appropriate xarchiver.tap file in the next release.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
@@ -42,5 +42,5 @@ will include an appropriate xarchiver.tap file in the next release.
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS README THANKS
 %{_libdir}/thunarx-2/*
-%{_libdir}/%{name}
+%{_libexecdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
