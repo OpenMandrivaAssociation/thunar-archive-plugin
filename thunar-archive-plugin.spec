@@ -41,6 +41,6 @@ will include an appropriate xarchiver.tap file in the next release.
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS README THANKS
-%{_libdir}/thunarx-2/*
+%{_libexecdir}/thunar-archive-plugin/*.tap
 %{_libdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
