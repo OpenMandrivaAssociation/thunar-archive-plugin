@@ -43,4 +43,5 @@ will include an appropriate xarchiver.tap file in the next release.
 %doc AUTHORS ChangeLog NEWS README THANKS
 %{_libexecdir}/thunar-archive-plugin/*.tap
 %{_libdir}/%{name}
+%{_libdir}/thunarx-2/thunar-archive-plugin.so
 %{_iconsdir}/hicolor/*/apps/*
