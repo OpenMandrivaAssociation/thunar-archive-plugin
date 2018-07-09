@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   thunar-archive-plugin-0.3.1.tar.bz2: 56d4c075eb570167caabdb5e4da8119fed4c16cb
+sources:
+  thunar-archive-plugin-0.4.0.tar.bz2: a5f2e9c57b2439364b089eeccd1a7d0e926a0cc2

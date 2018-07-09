@@ -1,15 +1,16 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f1,2)
+%define _disable_rebuild_configure 1
 
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
-Version:	0.3.1
-Release:	5
+Version:	0.4.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(thunarx-2)
+BuildRequires:	pkgconfig(thunarx-3)
 BuildRequires:	pkgconfig(exo-1)
 BuildRequires:	xfce4-dev-tools
 
@@ -41,6 +42,6 @@ will include an appropriate xarchiver.tap file in the next release.
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS README THANKS
-%{_libdir}/thunarx-2/*
+%{_libdir}/thunarx-3/*
 %{_libexecdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
