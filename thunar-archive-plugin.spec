@@ -11,7 +11,7 @@ URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(thunarx-3)
-BuildRequires:	pkgconfig(exo-1)
+BuildRequires:	pkgconfig(exo-2)
 BuildRequires:	xfce4-dev-tools
 
 %description
