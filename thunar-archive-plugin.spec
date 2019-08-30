@@ -4,7 +4,7 @@
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
@@ -33,10 +33,10 @@ will include an appropriate xarchiver.tap file in the next release.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name}
 
