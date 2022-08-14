@@ -41,7 +41,7 @@ will include an appropriate xarchiver.tap file in the next release.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog NEWS README THANKS
+%doc AUTHORS ChangeLog NEWS README* THANKS
 %{_libdir}/thunarx-3/*
 %{_libexecdir}/%{name}
 %{_iconsdir}/hicolor/*/apps/*
