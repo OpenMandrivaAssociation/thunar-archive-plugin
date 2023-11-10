@@ -3,7 +3,7 @@
 
 Summary:	An archive plugin for the Thunar File Manager
 Name:		thunar-archive-plugin
-Version:	0.5.1
+Version:	0.5.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
