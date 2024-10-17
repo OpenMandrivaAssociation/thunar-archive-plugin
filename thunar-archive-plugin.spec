@@ -7,7 +7,7 @@ Version:	0.5.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
+URL:		https://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 Source0:	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(thunarx-3)
